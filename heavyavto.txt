@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+class HeavyAvto extends Avto{
+    private double ves;
+    public HeavyAvto() {
+        super();
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Введите грузоподъемность): ");
+        this.ves = scanner.nextDouble();
+    }
+
+    public double getVes() {
+        return ves;
+    }
+
+    public void setVes(double ves) {
+        this.ves = ves;
+    }
+
+    @Override
+    public void Viv() {
+        super.Viv(); // Вызов метода базового класса
+        System.out.println("Грузоподъемность: " + ves + " тонн");
+    }
+    public boolean cando(double ves1) {
+        return ves1 <= ves;
+    }
+}

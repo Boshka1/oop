@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Avto avto = new Avto();
+        avto.Viv();
+
+        System.out.println();
+
+        HeavyAvto heavyAvto = new HeavyAvto();
+        heavyAvto.Viv();
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Сколько необходимо перевезти:");
+        double ves1 = sc.nextInt(); // в тоннах
+        if (heavyAvto.cando(ves1)) {
+            System.out.println("Грузовой автомобиль может перевозить груз весом " + ves1 + " тонн.");
+        } else {
+            System.out.println("Грузовой автомобиль не может перевозить груз весом " + ves1 + " тонн.");
+        }
+    }
+}

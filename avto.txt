@@ -1,0 +1,47 @@
+import java.util.Scanner;
+
+class Avto {
+    private String marka;
+    private int power; // в л.с.
+    private double volume; // в литрах
+
+    public Avto() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Введите марку автомобиля: ");
+        this.marka = scanner.nextLine();
+        System.out.print("Введите мощность двигателя: ");
+        this.power = scanner.nextInt();
+        System.out.print("Введите объем двигателя: ");
+        this.volume = scanner.nextDouble();
+    }
+
+    public String getMarka() {
+        return marka;
+    }
+
+    public void setMarka(String marka) {
+        this.marka = marka;
+    }
+
+    public int getPower() {
+        return power;
+    }
+
+    public void setPower(int power) {
+        this.power = power;
+    }
+
+    public double getVolume() {
+        return volume;
+    }
+
+    public void setVolume(double volume) {
+        this.volume = volume;
+    }
+
+    public void Viv() {
+        System.out.println("Марка: " + marka);
+        System.out.println("Мощность: " + power + " л.с.");
+        System.out.println("Объем двигателя: " + volume + " л.");
+    }
+}
